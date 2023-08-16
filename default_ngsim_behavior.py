@@ -99,12 +99,13 @@ class SumoEnv:
     @staticmethod
     def setup_vehicles():
         vehicle_departures = {}  # Dictionary to store vehicle names and departure times
-        for route_id, depart_lane_, color_, vehicles in [('route0', Lane.MAIN.value, Color.MAIN_INIT.value, main_vehicles),
-                                                         ('route1', Lane.RAMP.value, Color.RAMP_INIT.value, ramp_vehicles)]:
+        for route_id, color_, vehicles in [('route0', Color.MAIN_INIT.value, main_vehicles),
+                                                         ('route1', Color.RAMP_INIT.value, ramp_vehicles)]:
             for v_ in vehicles:
                 name = 'main_veh' if route_id == 'route0' else 'ramp_veh'
+                pos_min= 20 if route_id == 'route0' else 101
                 veh_name_ = name + str((v_.Vehicle_ID.values[0]).item())
-                depart_pos_ = (v_.Local_Y.values[0]).item()
+                depart_pos_ = (v_.Local_Y.values[0]).item()-pos_min
                 depart_time_ = (v_.Global_Time.values[0] - start_time) / 1000  # to second
                 depart_speed_ = (v_.v_Vel.values[0]).item()
                 # depart_speed_ = random.randint(150, 300) * 0.1
@@ -113,8 +114,7 @@ class SumoEnv:
                                   typeID="Car",
                                   depart=depart_time_,
                                   departPos=depart_pos_,
-                                  departSpeed=depart_speed_,
-                                  departLane=depart_lane_)
+                                  departSpeed=depart_speed_)
                 # Store vehicle name and departure time in the dictionary
                 vehicle_departures[veh_name_] = depart_time_
 
@@ -159,23 +159,26 @@ class SumoEnv:
     def get_vehicle_speed_from_trajectory(veh_id, current_step, departure_time):
         veh_num_id = int(veh_id[8:])  # Extract numerical ID from veh_id
         next_state = int(current_step-departure_time*10 + 1)
+        change_lane=0
 
         for v_ in main_vehicles:
             if v_.Vehicle_ID.values[0] == veh_num_id:
                 try:
                     #print(f"main vehicle {veh_id}, {v_.v_Vel.values[current_step + 1].item(), v_.Lane_ID.values[current_step + 1].item()}")
-                    return v_.v_Vel.values[next_state].item(), v_.Lane_ID.values[next_state].item()
+                    return v_.v_Vel.values[next_state].item(), v_.Lane_ID.values[next_state].item(), change_lane
                 except IndexError:
                     print(f"IndexError: skipping vehicle {veh_id}")
-                    return None,None
+                    return None,None,None
         for v_ in ramp_vehicles:
             if v_.Vehicle_ID.values[0] == veh_num_id:
                 try:
+                    if v_.Local_X.values[next_state].item()<21.6:
+                        change_lane=1
                     #print(f"ramp vehicle {veh_id}, {v_.v_Vel.values[current_step + 1].item(), v_.Lane_ID.values[current_step + 1].item()}")
-                    return v_.v_Vel.values[next_state].item(), v_.Lane_ID.values[next_state].item()
+                    return v_.v_Vel.values[next_state].item(), v_.Lane_ID.values[next_state].item(), change_lane
                 except IndexError:
                     print(f"IndexError: skipping vehicle {veh_id}")
-                    return None,None
+                    return None,None,None
         raise ValueError(f"Vehicle {veh_id} not found in any trajectory.")
 
 
@@ -191,11 +194,16 @@ class SumoEnv:
 
             #Update each vehicle's speed and lane
             for veh_id in traci.vehicle.getIDList():
-                veh_speed, lane_id = self.get_vehicle_speed_from_trajectory(veh_id, current_step,vehicle_departures.get(veh_id))
+                veh_speed, lane_id, change_lane= self.get_vehicle_speed_from_trajectory(veh_id, current_step,vehicle_departures.get(veh_id))
                 if veh_speed is not None:
                     traci.vehicle.setSpeed(veh_id, veh_speed)
                     print(veh_id,veh_speed)
-                    if veh_id.startswith("ramp_veh") and lane_id == 6 and veh_id not in changed_lane_vehicles:
+                    #print(change_lane)
+                    # if veh_id.startswith("ramp_veh") and lane_id == 6 and veh_id not in changed_lane_vehicles:
+                    #     print(f"Vehicle {veh_id} is changing lane")
+                    #     traci.vehicle.changeLane(veh_id, 1, 1)
+                    #     changed_lane_vehicles.add(veh_id)  # Add the vehicle ID to the set of changed lane vehicles
+                    if change_lane == 1 and veh_id not in changed_lane_vehicles:
                         print(f"Vehicle {veh_id} is changing lane")
                         traci.vehicle.changeLane(veh_id, 1, 1)
                         changed_lane_vehicles.add(veh_id)  # Add the vehicle ID to the set of changed lane vehicles
@@ -221,7 +229,7 @@ class SumoEnv:
         sumoBinary = checkBinary('sumo-gui')
         # sumoCmd = [sumoBinary, "-c", "scene/ramp.sumocfg"]  # "--additional-files", "scene/additional.xml"
         sumoCmd = [sumoBinary, "-c", "scene/ramp.sumocfg",
-                   "--additional-files", "scene/additional.xml",
+                   # "--additional-files", "scene/additional.xml",
                    "--tripinfo-output", "nocontrol_output.xml"]
         traci.start(sumoCmd)
         return
