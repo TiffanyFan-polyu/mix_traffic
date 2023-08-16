@@ -1,0 +1,25 @@
+<routes>
+
+<!--<vType accel="2.75" decel="2.75" id="Car" length="4.37" maxSpeed="33.33"  sigma="0" minGap="1.5" tau="1.5"  departSpeed='max' carFollowModel="W99" lcAssertive="3.4" >-->
+<!--</vType>-->
+
+<vType accel="3.5" decel="3.5" id="Car" length="4.37" maxSpeed="31"  sigma="0" minGap="1" tau="1.5"  carFollowModel="W99">
+</vType>
+
+<route id="route0" edges="upstream acc  downstream" />
+<!--vehicle depart="10" id="veh0" route="route0" type="Car"   Krauss   33.33/--> 
+
+<route id="route1" edges="upstream acc downstream" />
+<!--route id="route1" edges="ramp  acc downstream" /-->
+<!--vehicle depart="50" id="veh1" route="route1" type="Car" /-->
+
+</routes>
+
+ 
+
+<!-- lcAssertive="1" lcPushy="1" lcSublane="0.8"  lcCooperative="1"  lcStrategic="1" 
+<flow id="route0" type="Car" begin="0" end="60000" period="3" departPos="last" departSpeed="max" departLane="free">
+  <route edges="upstream acc  downstream"/>
+</flow>
+-->
+

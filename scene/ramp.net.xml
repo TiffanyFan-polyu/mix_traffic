@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-05-12 21:14:38 by Eclipse SUMO netconvert Version 1.13.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="ramp.nod.xml"/>
+        <edge-files value="ramp.edg.xml"/>
+        <type-files value="ramp.type.xml"/>
+    </input>
+
+    <output>
+        <output-file value="ramp.net.xml"/>
+    </output>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="350.00,0.00" convBoundary="0.00,0.00,1550.00,0.00" origBoundary="-350.00,0.00,1200.00,0.00" projParameter="!"/>
+
+    <type id="3P1L120" priority="-1" numLanes="1" speed="33.33"/>
+    <type id="3P2L120" priority="-1" numLanes="2" speed="33.33"/>
+
+    <edge id=":1_0" function="internal">
+        <lane id=":1_0_0" index="0" speed="33.33" length="0.10" shape="350.00,-4.80 350.00,-4.80"/>
+        <lane id=":1_0_1" index="1" speed="33.33" length="0.10" shape="350.00,-1.60 350.00,-1.60"/>
+    </edge>
+    <edge id=":2_0" function="internal">
+        <lane id=":2_0_0" index="0" speed="33.33" length="8.00" shape="946.00,-1.60 954.00,-1.60"/>
+    </edge>
+
+    <edge id="acc" from="1" to="2" priority="-1" type="3P2L120">
+        <lane id="acc_0" index="0" speed="33.33" length="596.00" shape="350.00,-4.80 946.00,-4.80"/>
+        <lane id="acc_1" index="1" speed="33.33" length="596.00" shape="350.00,-1.60 946.00,-1.60"/>
+    </edge>
+    <edge id="downstream" from="2" to="3" priority="-1" type="3P1L120">
+        <lane id="downstream_0" index="0" speed="33.33" length="596.00" shape="954.00,-1.60 1550.00,-1.60"/>
+    </edge>
+    <edge id="upstream" from="0" to="1" priority="-1" type="3P2L120">
+        <lane id="upstream_0" index="0" speed="33.33" length="350.00" shape="0.00,-4.80 350.00,-4.80"/>
+        <lane id="upstream_1" index="1" speed="33.33" length="350.00" shape="0.00,-1.60 350.00,-1.60"/>
+    </edge>
+
+    <junction id="0" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-6.40"/>
+    <junction id="1" type="priority" x="350.00" y="0.00" incLanes="upstream_0 upstream_1" intLanes=":1_0_0 :1_0_1" shape="350.00,0.00 350.00,-6.40 350.00,0.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="2" type="priority" x="950.00" y="0.00" incLanes="acc_0 acc_1" intLanes=":2_0_0" shape="954.00,0.00 954.00,-3.20 950.97,-4.03 949.03,-5.57 947.79,-6.16 946.00,-6.40 946.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="3" type="dead_end" x="1550.00" y="0.00" incLanes="downstream_0" intLanes="" shape="1550.00,-3.20 1550.00,0.00"/>
+
+    <connection from="acc" to="downstream" fromLane="1" toLane="0" via=":2_0_0" dir="s" state="M"/>
+    <connection from="upstream" to="acc" fromLane="0" toLane="0" via=":1_0_0" dir="s" state="M"/>
+    <connection from="upstream" to="acc" fromLane="1" toLane="1" via=":1_0_1" dir="s" state="M"/>
+
+    <connection from=":1_0" to="acc" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":1_0" to="acc" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":2_0" to="downstream" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

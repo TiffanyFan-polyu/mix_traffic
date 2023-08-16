@@ -1,0 +1,6 @@
+<edges>
+<edge from="0" to="1" id="upstream" type="3P2L120" />
+<edge from="1" to="2" id="acc" type="3P2L120" />
+<edge from="2" to="3" id="downstream" type="3P1L120" />
+<!--<edge from="4" to="1" id="ramp" type="3P1L120" />-->
+</edges>
