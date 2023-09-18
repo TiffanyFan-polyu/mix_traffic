@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-09-18 16:14:09 by Eclipse SUMO sumo Version 1.17.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="scene/ramp160.net.xml"/>
+        <route-files value="scene/veh.rou.xml"/>
+        <additional-files value="scene/input_types.add.xml,scene/ ramp.detector.xml"/>
+    </input>
+
+    <output>
+        <fcd-output value="scene/./output/fcd.xml"/>
+        <lanechange-output value="scene/./output/lanechange.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <duration-log.disable value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="55922"/>
+    </traci_server>
+
+    <random_number>
+        <random value="true"/>
+        <seed value="0"/>
+    </random_number>
+
+    <gui_only>
+        <gui-settings-file value="scene/gui-settings.cfg"/>
+        <delay value="100"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<lanechanges>
+    <change id="ramp_39.0" type="HDV" time="6.00" from="acc_0" to="acc_1" dir="1" speed="27.86" pos="75.17" reason="strategic|urgent" leaderGap="None" leaderSecureGap="None" leaderSpeed="None" followerGap="52.29" followerSecureGap="68.40" followerSpeed="32.95" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.1" type="HDV" time="16.30" from="acc_0" to="acc_1" dir="1" speed="28.25" pos="72.74" reason="strategic|urgent" leaderGap="32.10" leaderSecureGap="0.00" leaderSpeed="31.39" followerGap="176.40" followerSecureGap="130.34" followerSpeed="32.92" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.2" type="HDV" time="26.80" from="acc_0" to="acc_1" dir="1" speed="27.86" pos="75.14" reason="strategic|urgent" leaderGap="167.44" leaderSecureGap="0.00" leaderSpeed="35.91" followerGap="65.76" followerSecureGap="67.04" followerSpeed="32.86" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.3" type="HDV" time="37.20" from="acc_0" to="acc_1" dir="1" speed="28.33" pos="72.24" reason="strategic|urgent" leaderGap="24.92" leaderSecureGap="0.00" leaderSpeed="29.67" followerGap="182.43" followerSecureGap="128.06" followerSpeed="32.75" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.4" type="HDV" time="47.60" from="acc_0" to="acc_1" dir="1" speed="27.89" pos="74.92" reason="strategic|urgent" leaderGap="148.76" leaderSecureGap="0.00" leaderSpeed="36.40" followerGap="68.89" followerSecureGap="124.11" followerSpeed="36.61" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.5" type="HDV" time="57.80" from="acc_0" to="acc_1" dir="1" speed="28.46" pos="71.39" reason="strategic|urgent" leaderGap="35.44" leaderSecureGap="0.00" leaderSpeed="35.30" followerGap="198.11" followerSecureGap="112.11" followerSpeed="31.25" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.6" type="HDV" time="68.20" from="acc_0" to="acc_1" dir="1" speed="28.40" pos="71.70" reason="strategic|urgent" leaderGap="115.10" leaderSecureGap="0.00" leaderSpeed="28.44" followerGap="100.79" followerSecureGap="100.48" followerSpeed="30.02" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.7" type="HDV" time="78.60" from="acc_0" to="acc_1" dir="1" speed="28.20" pos="73.04" reason="strategic|urgent" leaderGap="18.62" leaderSecureGap="0.00" leaderSpeed="33.45" followerGap="212.27" followerSecureGap="112.38" followerSpeed="31.11" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.8" type="HDV" time="89.00" from="acc_0" to="acc_1" dir="1" speed="28.16" pos="73.14" reason="strategic|urgent" leaderGap="101.50" leaderSecureGap="0.00" leaderSpeed="31.16" followerGap="99.76" followerSecureGap="135.81" followerSpeed="33.41" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.9" type="HDV" time="101.30" from="acc_0" to="acc_1" dir="1" speed="19.66" pos="118.03" reason="strategic|urgent" leaderGap="4.60" leaderSecureGap="0.00" leaderSpeed="31.39" followerGap="205.52" followerSecureGap="176.01" followerSpeed="32.96" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.10" type="HDV" time="109.70" from="acc_0" to="acc_1" dir="1" speed="28.38" pos="71.91" reason="strategic|urgent" leaderGap="107.45" leaderSecureGap="0.00" leaderSpeed="32.95" followerGap="110.31" followerSecureGap="149.25" followerSpeed="34.81" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+    <change id="ramp_39.11" type="HDV" time="120.60" from="acc_0" to="acc_1" dir="1" speed="28.25" pos="72.63" reason="strategic|urgent" leaderGap="9.13" leaderSecureGap="0.00" leaderSpeed="33.71" followerGap="218.12" followerSecureGap="113.40" followerSpeed="31.24" origLeaderGap="None" origLeaderSecureGap="None" origLeaderSpeed="None"/>
+</lanechanges>

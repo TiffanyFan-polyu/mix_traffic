@@ -1,0 +1,56 @@
+<additional>
+<!--	   <inductionLoop id="loop_main" lane=":1_0_0" pos="-50" freq="0.05" friendlyPos="true" file="loop_main.txt"/>-->
+	   <inductionLoop id="loop_ramp" lane="upstream_0" pos="300" freq="0.02" friendlyPos="true" file="loop_ramp.txt"/>
+	   <inductionLoop id="loop_down" lane="downstream_0" pos="30" freq="0.05" friendlyPos="true" file="loop_ramp.txt"/>
+
+	<!--	   <inductionLoop id="l1" lane="upstream_0" edge="0"  pos="-50" freq="0.05" friendlyPos="true"/>-->
+
+<!--	   <inductionLoop id="l2" lane="downstream_0" pos="1000" freq="0.01"-->
+<!--   file="loop2.txt" friendlyPos="true" />-->
+<!--   	   <inductionLoop id="l3" lane="upstream_0" pos="500" freq="0.01"-->
+<!--   file="loop2.txt" friendlyPos="true" />-->
+<!--   	   <inductionLoop id="l4" lane="ramp_0" pos="500" freq="0.01"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--   	   <inductionLoop id="lramp_drop" lane="ramp_0" pos="1200" freq="0.01"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+
+
+<!--		<inductionLoop id="l5" lane="downstream_0" pos="100" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l5.2" lane="upstream_0" pos="-1500" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l5.5" lane="upstream_0" pos="-1000" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--		<inductionLoop id="l6" lane="upstream_0" pos="-800" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l7" lane="upstream_0" pos="-600" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l8" lane="upstream_0" pos="-400" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l9" lane="upstream_0" pos="-200" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l10" lane="acc_1" pos="0" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	    <inductionLoop id="l11" lane="acc_1" pos="200" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	<inductionLoop id="lacc_end" lane="acc_0" pos="280" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	<inductionLoop id="l12" lane="downstream_0" pos="100" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	<inductionLoop id="l13" lane="downstream_0" pos="300" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--	<inductionLoop id="l14" lane="downstream_0" pos="500" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--		<inductionLoop id="l15" lane="downstream_0" pos="700" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--		<inductionLoop id="l16" lane="downstream_0" pos="1000" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--			<inductionLoop id="l17" lane="downstream_0" pos="2000" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+<!--			<inductionLoop id="l18" lane="downstream_0" pos="3000" freq="0.1"-->
+<!--   file="loop2.txt" friendlyPos="true"  />-->
+
+
+<!--    <laneData id="acc_1" file="acc1_lane.txt" begin="600" end="4800" />-->
+
+</additional>

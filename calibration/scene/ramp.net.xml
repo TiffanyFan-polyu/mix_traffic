@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-08-30 17:11:06 by Eclipse SUMO netconvert Version 1.17.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="ramp.nod.xml"/>
+        <edge-files value="ramp.edg.xml"/>
+        <type-files value="ramp.type.xml"/>
+    </input>
+
+    <output>
+        <output-file value="ramp.net.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<net version="1.16" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,20.00" convBoundary="0.00,0.00,420.00,20.00" origBoundary="0.00,-20.00,420.00,0.00" projParameter="!"/>
+
+    <type id="3P1L120" priority="-1" numLanes="1" speed="33.33"/>
+    <type id="3P2L120" priority="-1" numLanes="2" speed="33.33"/>
+    <type id="3P3L120" priority="-1" numLanes="3" speed="33.33"/>
+
+    <edge id=":1_0" function="internal">
+        <lane id=":1_0_0" index="0" speed="33.33" length="3.31" shape="66.53,11.67 67.50,11.86 68.16,11.96 68.83,11.99 69.82,12.00"/>
+    </edge>
+    <edge id=":1_1" function="internal">
+        <lane id=":1_1_0" index="0" speed="33.33" length="3.32" shape="66.50,15.20 69.82,15.20"/>
+        <lane id=":1_1_1" index="1" speed="33.33" length="3.32" shape="66.50,18.40 69.82,18.40"/>
+    </edge>
+    <edge id=":2_0" function="internal">
+        <lane id=":2_0_0" index="0" speed="33.33" length="8.00" shape="324.00,15.20 332.00,15.20"/>
+        <lane id=":2_0_1" index="1" speed="33.33" length="8.00" shape="324.00,18.40 332.00,18.40"/>
+    </edge>
+
+    <edge id="acc" from="1" to="2" priority="-1" type="3P3L120">
+        <lane id="acc_0" index="0" speed="33.33" length="228.18" acceleration="1" shape="69.82,12.00 324.00,12.00"/>
+        <lane id="acc_1" index="1" speed="33.33" length="228.18" shape="69.82,15.20 324.00,15.20"/>
+        <lane id="acc_2" index="2" speed="33.33" length="228.18" shape="69.82,18.40 324.00,18.40"/>
+    </edge>
+    <edge id="downstream" from="2" to="3" priority="-1" type="3P2L120">
+        <lane id="downstream_0" index="0" speed="33.33" length="88.00" shape="332.00,15.20 420.00,15.20"/>
+        <lane id="downstream_1" index="1" speed="33.33" length="88.00" shape="332.00,18.40 420.00,18.40"/>
+    </edge>
+    <edge id="onramp" from="4" to="1" priority="-1" type="3P1L120">
+        <lane id="onramp_0" index="0" speed="33.33" length="67.53" shape="0.31,-1.57 66.53,11.67"/>
+    </edge>
+    <edge id="upstream" from="0" to="1" priority="-1" type="3P2L120">
+        <lane id="upstream_0" index="0" speed="33.33" length="66.50" shape="0.00,15.20 66.50,15.20"/>
+        <lane id="upstream_1" index="1" speed="33.33" length="66.50" shape="0.00,18.40 66.50,18.40"/>
+    </edge>
+
+    <junction id="0" type="dead_end" x="0.00" y="20.00" incLanes="" intLanes="" shape="0.00,20.00 0.00,13.60"/>
+    <junction id="1" type="priority" x="100.00" y="20.00" incLanes="onramp_0 upstream_0 upstream_1" intLanes=":1_0_0 :1_1_0 :1_1_1" shape="69.82,20.00 69.82,10.40 68.71,10.39 68.32,10.36 67.94,10.31 67.47,10.23 66.85,10.11 66.22,13.24 66.50,13.60 66.50,20.00">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="2" type="priority" x="328.00" y="20.00" incLanes="acc_0 acc_1 acc_2" intLanes=":2_0_0 :2_0_1" shape="332.00,20.00 332.00,13.60 328.97,12.77 327.03,11.23 325.79,10.64 324.00,10.40 324.00,20.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="3" type="dead_end" x="420.00" y="20.00" incLanes="downstream_0 downstream_1" intLanes="" shape="420.00,13.60 420.00,20.00"/>
+    <junction id="4" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.63,-3.14"/>
+
+    <connection from="acc" to="downstream" fromLane="1" toLane="0" via=":2_0_0" dir="s" state="M"/>
+    <connection from="acc" to="downstream" fromLane="2" toLane="1" via=":2_0_1" dir="s" state="M"/>
+    <connection from="onramp" to="acc" fromLane="0" toLane="0" via=":1_0_0" dir="s" state="M"/>
+    <connection from="upstream" to="acc" fromLane="0" toLane="1" via=":1_1_0" dir="s" state="M"/>
+    <connection from="upstream" to="acc" fromLane="1" toLane="2" via=":1_1_1" dir="s" state="M"/>
+
+    <connection from=":1_0" to="acc" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":1_1" to="acc" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":1_1" to="acc" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":2_0" to="downstream" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":2_0" to="downstream" fromLane="1" toLane="1" dir="s" state="M"/>
+
+</net>

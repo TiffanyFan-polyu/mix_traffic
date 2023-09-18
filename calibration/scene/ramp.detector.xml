@@ -1,0 +1,64 @@
+<additional>
+
+
+   	<inductionLoop id="onramp-10" lane="onramp_0" pos="20" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-9" lane="onramp_0" pos="30" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-8" lane="onramp_0" pos="40" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-7" lane="onramp_0" pos="50" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-6" lane="onramp_0" pos="60" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-5" lane="onramp_0" pos="70" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-4" lane="onramp_0" pos="80" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-3" lane="onramp_0" pos="90" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-2" lane="onramp_0" pos="100" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp-1" lane="onramp_0" pos="110" freq="14365" file="./output/onramp.xml"/>
+   	<inductionLoop id="onramp0" lane="onramp_0" pos="120" freq="14365" file="./output/onramp.xml"/>
+	
+    <inductionLoop id="onramp1" lane="acc_0" pos="10" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp2" lane="acc_0" pos="20" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp3" lane="acc_0" pos="30" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp4" lane="acc_0" pos="40" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp5" lane="acc_0" pos="50" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp6" lane="acc_0" pos="60" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp7" lane="acc_0" pos="70" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp8" lane="acc_0" pos="80" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp9" lane="acc_0" pos="90" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp10" lane="acc_0" pos="100" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp11" lane="acc_0" pos="110" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp12" lane="acc_0" pos="120" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp13" lane="acc_0" pos="130" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp14" lane="acc_0" pos="140" freq="14365" file="./output/onramp.xml"/>
+    <inductionLoop id="onramp15" lane="acc_0" pos="150" freq="14365" file="./output/onramp.xml"/>
+	<inductionLoop id="onramp16" lane="acc_0" pos="160" freq="14365" file="./output/onramp.xml"/>
+	
+
+   	<inductionLoop id="mainline-10" lane="upstream_0" pos="80" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-9" lane="upstream_0" pos="90" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-8" lane="upstream_0" pos="100" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-7" lane="upstream_0" pos="110" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-6" lane="upstream_0" pos="120" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-5" lane="upstream_0" pos="130" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-4" lane="upstream_0" pos="140" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-3" lane="upstream_0" pos="150" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-2" lane="upstream_0" pos="160" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline-1" lane="upstream_0" pos="170" freq="14365" file="./output/mainline.xml"/>
+   	<inductionLoop id="mainline0" lane="upstream_0" pos="180" freq="14365" file="./output/mainline.xml"/>
+
+    <inductionLoop id="mainline1" lane="acc_1" pos="10" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline2" lane="acc_1" pos="20" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline3" lane="acc_1" pos="30" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline4" lane="acc_1" pos="40" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline5" lane="acc_1" pos="50" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline6" lane="acc_1" pos="60" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline7" lane="acc_1" pos="70" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline8" lane="acc_1" pos="80" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline9" lane="acc_1" pos="90" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline10" lane="acc_1" pos="100" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline11" lane="acc_1" pos="110" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline12" lane="acc_1" pos="120" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline13" lane="acc_1" pos="130" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline14" lane="acc_1" pos="140" freq="14365" file="./output/mainline.xml"/>
+    <inductionLoop id="mainline15" lane="acc_1" pos="150" freq="14365" file="./output/mainline.xml"/>
+	<inductionLoop id="mainline16" lane="acc_1" pos="160" freq="14365" file="./output/mainline.xml"/>
+
+
+</additional>

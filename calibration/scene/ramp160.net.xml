@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-08-23 21:37:20 by Eclipse SUMO netedit Version 1.17.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="D:\FTT\mix_traffic\new\scene\ramp.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="D:\FTT\mix_traffic\new\scene\ramp.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</configuration>
+-->
+
+<net version="1.16" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,20.00" convBoundary="0.00,0.00,440.00,20.00" origBoundary="0.00,-20.00,440.00,0.00" projParameter="!"/>
+
+    <type id="3P1L120" priority="-1" numLanes="1" speed="33.33"/>
+    <type id="3P2L120" priority="-1" numLanes="2" speed="33.33"/>
+    <type id="3P3L120" priority="-1" numLanes="3" speed="33.33"/>
+
+    <edge id=":1_0" function="internal">
+        <lane id=":1_0_0" index="0" speed="33.33" length="3.18" shape="120.91,11.82 121.85,11.93 122.49,11.98 123.13,12.00 124.08,12.00"/>
+    </edge>
+    <edge id=":1_1" function="internal">
+        <lane id=":1_1_0" index="0" speed="33.33" length="3.18" shape="120.90,15.20 124.08,15.20"/>
+        <lane id=":1_1_1" index="1" speed="33.33" length="3.18" shape="120.90,18.40 124.08,18.40"/>
+    </edge>
+    <edge id=":2_0" function="internal">
+        <lane id=":2_0_0" index="0" speed="33.33" length="8.00" shape="336.00,15.20 344.00,15.20"/>
+        <lane id=":2_0_1" index="1" speed="33.33" length="8.00" shape="336.00,18.40 344.00,18.40"/>
+    </edge>
+
+    <edge id="acc" from="1" to="2" priority="-1" type="3P3L120" spreadType="roadCenter" length="160.00">
+        <lane id="acc_0" index="0" speed="33.33" length="160.00" acceleration="1" shape="124.08,12.00 336.00,12.00"/>
+        <lane id="acc_1" index="1" speed="33.33" length="160.00" shape="124.08,15.20 336.00,15.20"/>
+        <lane id="acc_2" index="2" speed="33.33" length="160.00" shape="124.08,18.40 336.00,18.40"/>
+    </edge>
+    <edge id="downstream" from="2" to="3" priority="-1" type="3P2L120">
+        <lane id="downstream_0" index="0" speed="33.33" length="96.00" shape="344.00,15.20 440.00,15.20"/>
+        <lane id="downstream_1" index="1" speed="33.33" length="96.00" shape="344.00,18.40 440.00,18.40"/>
+    </edge>
+    <edge id="onramp" from="4" to="1" priority="-1" type="3P1L120" spreadType="roadCenter">
+        <lane id="onramp_0" index="0" speed="33.33" length="121.48" shape="0.18,-1.59 120.91,11.82"/>
+    </edge>
+    <edge id="upstream" from="0" to="1" priority="-1" type="3P2L120" spreadType="roadCenter" length="180.00">
+        <lane id="upstream_0" index="0" speed="33.33" length="180.00" shape="0.00,15.20 120.90,15.20"/>
+        <lane id="upstream_1" index="1" speed="33.33" length="180.00" shape="0.00,18.40 120.90,18.40"/>
+    </edge>
+
+    <junction id="0" type="dead_end" x="0.00" y="20.00" incLanes="" intLanes="" shape="0.00,20.00 0.00,13.60"/>
+    <junction id="1" type="priority" x="180.00" y="20.00" incLanes="onramp_0 upstream_0 upstream_1" intLanes=":1_0_0 :1_1_0 :1_1_1" shape="124.08,20.00 124.08,10.40 122.97,10.39 122.58,10.38 122.19,10.35 121.72,10.30 121.09,10.23 120.73,13.41 120.90,13.60 120.90,20.00">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="2" type="priority" x="340.00" y="20.00" incLanes="acc_0 acc_1 acc_2" intLanes=":2_0_0 :2_0_1" shape="344.00,20.00 344.00,13.60 340.97,12.77 339.03,11.23 337.79,10.64 336.00,10.40 336.00,20.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="3" type="dead_end" x="440.00" y="20.00" incLanes="downstream_0 downstream_1" intLanes="" shape="440.00,13.60 440.00,20.00"/>
+    <junction id="4" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.35,-3.18"/>
+
+    <connection from="acc" to="downstream" fromLane="1" toLane="0" via=":2_0_0" dir="s" state="M"/>
+    <connection from="acc" to="downstream" fromLane="2" toLane="1" via=":2_0_1" dir="s" state="M"/>
+    <connection from="onramp" to="acc" fromLane="0" toLane="0" via=":1_0_0" dir="s" state="M"/>
+    <connection from="upstream" to="acc" fromLane="0" toLane="1" via=":1_1_0" dir="s" state="M"/>
+    <connection from="upstream" to="acc" fromLane="1" toLane="2" via=":1_1_1" dir="s" state="M"/>
+
+    <connection from=":1_0" to="acc" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":1_1" to="acc" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":1_1" to="acc" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":2_0" to="downstream" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":2_0" to="downstream" fromLane="1" toLane="1" dir="s" state="M"/>
+
+</net>

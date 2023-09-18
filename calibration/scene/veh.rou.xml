@@ -1,0 +1,58 @@
+<routes>
+  <flow id="main_inner_39" type="HDV" color="green" begin="0.0" end="1660.72" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="388.0244713136471"/> 
+  <flow id="main_outer_39" type="HDV" color="yellow" begin="0.0" end="1660.72" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="511.58533648056266"/> 
+  <flow id="ramp_39" type="HDV" color="red" begin="0.0" end="1660.72" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="346.8375162580086"/> 
+
+  <flow id="main_inner_40" type="HDV" color="green" begin="1660.72" end="3277.0" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="369.73791669760186"/> 
+  <flow id="main_outer_40" type="HDV" color="yellow" begin="1660.72" end="3277.0" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="554.6068750464028"/> 
+  <flow id="ramp_40" type="HDV" color="red" begin="1660.72" end="3277.0" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="360.8285693072982"/> 
+
+  <flow id="main_inner_41" type="HDV" color="green" begin="3277.0" end="4771.08" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="544.5491539944314"/> 
+  <flow id="main_outer_41" type="HDV" color="yellow" begin="3277.0" end="4771.08" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="510.81602056114804"/> 
+  <flow id="ramp_41" type="HDV" color="red" begin="3277.0" end="4771.08" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="395.1595630756051"/> 
+
+  <flow id="main_inner_42" type="HDV" color="green" begin="4771.08" end="5098.08" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="572.4770642201835"/> 
+  <flow id="main_outer_42" type="HDV" color="yellow" begin="4771.08" end="5098.08" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="561.4678899082569"/> 
+  <flow id="ramp_42" type="HDV" color="red" begin="4771.08" end="5098.08" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="352.29357798165137"/> 
+
+  <flow id="main_inner_43" type="HDV" color="green" begin="5098.08" end="6333.08" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="574.251012145749"/> 
+  <flow id="main_outer_43" type="HDV" color="yellow" begin="5098.08" end="6333.08" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="548.0161943319838"/> 
+  <flow id="ramp_43" type="HDV" color="red" begin="5098.08" end="6333.08" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="338.13765182186233"/> 
+
+  <flow id="main_inner_44" type="HDV" color="green" begin="6333.08" end="6949.12" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="280.50126615154863"/> 
+  <flow id="main_outer_44" type="HDV" color="yellow" begin="6333.08" end="6949.12" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="566.8463086812545"/> 
+  <flow id="ramp_44" type="HDV" color="red" begin="6333.08" end="6949.12" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="210.37594961366148"/> 
+
+  <flow id="main_inner_45" type="HDV" color="green" begin="6949.12" end="8406.68" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="296.38574055270453"/> 
+  <flow id="main_outer_45" type="HDV" color="yellow" begin="6949.12" end="8406.68" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="447.0484920003293"/> 
+  <flow id="ramp_45" type="HDV" color="red" begin="6949.12" end="8406.68" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="259.33752298361645"/> 
+
+  <flow id="main_inner_46" type="HDV" color="green" begin="8406.68" end="9999.76" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="601.0997564466317"/> 
+  <flow id="main_outer_46" type="HDV" color="yellow" begin="8406.68" end="9999.76" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="560.4238330780627"/> 
+  <flow id="ramp_46" type="HDV" color="red" begin="8406.68" end="9999.76" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="429.35696889045124"/> 
+
+  <flow id="main_inner_47" type="HDV" color="green" begin="9999.76" end="10580.8" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="582.4039653035936"/> 
+  <flow id="main_outer_47" type="HDV" color="yellow" begin="9999.76" end="10580.8" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="570.0123915737299"/> 
+  <flow id="ramp_47" type="HDV" color="red" begin="9999.76" end="10580.8" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="390.33457249070636"/> 
+
+  <flow id="main_inner_48" type="HDV" color="green" begin="10580.8" end="11320.8" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="608.1081081081081"/> 
+  <flow id="main_outer_48" type="HDV" color="yellow" begin="10580.8" end="11320.8" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="535.1351351351351"/> 
+  <flow id="ramp_48" type="HDV" color="red" begin="10580.8" end="11320.8" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="432.97297297297297"/> 
+
+  <flow id="main_inner_49" type="HDV" color="green" begin="11320.8" end="12802.48" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="558.8251174342638"/> 
+  <flow id="main_outer_49" type="HDV" color="yellow" begin="11320.8" end="12802.48" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="573.4031639760271"/> 
+  <flow id="ramp_49" type="HDV" color="red" begin="11320.8" end="12802.48" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="366.8808379677123"/> 
+
+  <flow id="main_inner_50" type="HDV" color="green" begin="12802.48" end="12962.52" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="494.8762809297676"/> 
+  <flow id="main_outer_50" type="HDV" color="yellow" begin="12802.48" end="12962.52" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="584.8537865533617"/> 
+  <flow id="ramp_50" type="HDV" color="red" begin="12802.48" end="12962.52" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="359.91002249437645"/> 
+
+  <flow id="main_inner_51" type="HDV" color="green" begin="12962.52" end="13989.76" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="445.0761263190686"/> 
+  <flow id="main_outer_51" type="HDV" color="yellow" begin="12962.52" end="13989.76" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="511.66231844554335"/> 
+  <flow id="ramp_51" type="HDV" color="red" begin="12962.52" end="13989.76" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="420.5443713251041"/> 
+
+  <flow id="main_inner_52" type="HDV" color="green" begin="13989.76" end="14350.28" departLane="1" departSpeed="30" from="upstream" to="downstream" vehsPerHour="399.42305558637526"/> 
+  <flow id="main_outer_52" type="HDV" color="yellow" begin="13989.76" end="14350.28" departLane="0" departSpeed="30" from="upstream" to="downstream" vehsPerHour="529.2355486519472"/> 
+  <flow id="ramp_52" type="HDV" color="red" begin="13989.76" end="14350.28" departLane="0" departSpeed="30" from="onramp" to="downstream" vehsPerHour="239.65383335182514"/> 
+
+</routes>

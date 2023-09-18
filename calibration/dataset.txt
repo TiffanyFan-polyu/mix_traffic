@@ -1,0 +1,13 @@
+rear：
+length of headway: 102
+length of distance: 102 mean: 58.18450980392157
+mean: 1.672097154754902
+variance 0.7386853611769646
+minimum: 0.577276755
+
+lead：
+length of headway: 102
+length of distance: 102 mean: 58.184509803921564
+mean: 2.4118207917352943
+variance 1.6406992626294146
+minimum: 0.381152133

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/sumoConfiguration.xsd">
+
+	<input>
+		<net-file value="ramp160.net.xml" />
+        <route-files value="veh.rou.xml" />
+		<additional-files value="input_types.add.xml, ramp.detector.xml"/>
+	</input>
+
+    <output>
+        <lanechange-output value="./output/lanechange.xml"/>
+		<fcd-output value="./output/fcd.xml"/>
+    </output>
+
+
+	<time>
+		<begin value="0" />
+		<step-length value="0.1"/>
+		<delay value="100"/>
+	</time>
+
+
+    <report>
+        <no-duration-log value="true"/>
+        <no-step-log value="true"/>
+		<no-warnings value="true"/>
+    </report>
+
+	<random_number>
+        <random value="true"/>
+        <seed value="0"/>
+    </random_number>
+
+
+    <gui-settings-file value="gui-settings.cfg"/>
+
+
+
+</configuration>
